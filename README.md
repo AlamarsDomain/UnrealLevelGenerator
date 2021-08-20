@@ -22,7 +22,7 @@ BP_LevelGenerator:
 - Back in the previous loop that waits for IsFinished, BuildBranchRooms is called.
 - BuildBranchRooms will follow a similar process to BuildRooms, but will stop when BuildRoom is not valid, up to the MaxBranchRoomCount.
 
-Optomizations:
+Optimizations:
 - Level Generation can potentially go along many branchs while trying to make that branch fit against the previously spawned BP_Rooms, which can result in a lot of Spawned BP_Rooms that then get Destroyed (either immediately due to overlap, or if the entire Main branch doesn't fit). BP_Rooms could eventually be complex objects, in which case, creating a 'boundary' version as a placeholder would speed up generation considerably. The boundary would just be enough information to include BP_Doors and a Static Mesh Component (or simiar) to check for overlaps.
 
 Improvements:
